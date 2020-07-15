@@ -1,0 +1,86 @@
+
+#nav1 h3,
+ul,
+p,
+table,
+body,
+figure {
+    padding: 0;
+    margin: 0;
+}
+
+/*
+#nav1 ul {
+    list-style-type: none;
+}*/
+
+
+/* 编写导航条样式 */
+#nav1 {
+    width: 100%;
+    height: 20%;
+    background-color: #555;
+    color: #fff;
+    position: fixed;
+    z-index: 9;
+    top: 0;
+}
+
+#nav1 #sub_nav {
+    display: none;
+    position: absolute;
+    z-index: 5;
+    width: 180px;
+    padding-bottom: 20px;
+    background-color: #fff;
+}
+
+#nav1 #sub_nav li {
+    line-height: 42px;
+    width: 100%;
+    margin-left: 30px;
+    text-align: left;
+    height: 42px;
+}
+
+#nav1 #sub_nav li a {
+    color: #444;
+}
+
+#nav1 #sub_nav li a:hover {
+    color: red;
+}
+
+#nav1 .con {
+    width: 1140px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: solid 0px red;
+    height: 60px;
+    line-height: 80px;
+}
+
+#nav1 .con .log,.total_btn {
+    float: left;
+    font-size: 28px;
+    margin-right: 100px;
+}
+
+#nav1 .con ul {
+    float: left;
+    overflow: hidden;
+}
+
+
+#nav1 .con .act {
+    float: right;
+}
+
+#nav1 .con .act a {
+    margin-right: 10px;
+}
+
+/* 编写一个获取焦点的前景色 */
+#nav1 .focus {
+    color: aqua
+}

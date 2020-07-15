@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小型教育网站</title>
+    <link rel="stylesheet" href="../static/css/login.css">
+    <script type="text/javascript" src="../static/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../static/js/jquery.SuperSlide.2.1.1.js"></script>  <!--和tab级联相关    js-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<section id="content">
+    <!--头部-->
+    <div class="content-header clearfix">
+        <a href="javascript:;" class="current">登录</a>
+    </div>
+    <!--内容-->
+    <div class="content-body">
+        <div class="dom" style="display: block;">
+            <div>
+                <div class="s1">
+                    <h4>账号</h4>
+                    <input name="phone" type="text" placeholder="手机">
+                </div>
+                <div class="s1">
+                    <h4>密码</h4>
+                    <input name="password" type="password" placeholder="请输入密码">
+                </div>
+                <div class="s2">
+                    <span></span>
+                </div>
+                <input type="button" class="btn"  onclick="login_btn()" value="登&nbsp;录">
+            </div>
+            <div class="dom-footer">
+                <div class="login-another">
+                    <span>还没有注册帐号?</span>
+                    <a href='http://118.89.49.60/user_regist'>立即注册</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+        <!-- 登录框 检测-->
+<script>
+    function login_btn() {
+        var pathname = window.location.pathname;
+        var phone1 = document.getElementsByName("phone")[0].value;
+        var password1 = document.getElementsByName("password")[0].value;
+        var data = {'phone':phone1,'password':password1};
+        if (!phone1){
+            alert('手机号不能为空！');
+            phone1.focus();
+            return false
+	}else if(!(/^1[3456789]\d{9}$/.test(phone1))){
+	    alert("手机号格式不正确");
+	    return false;
+        }else if(!password1){
+            alert('密码不能为空！');
+            password1.focus();
+            return false
+        }
+        $.ajax({
+            url:"http://118.89.49.60"+pathname,
+            type:'POST',
+            data: JSON.stringify(data),
+            contentType: 'application/json; charset=UTF-8',
+            success:function (resp) {
+                var res = eval(resp);
+                if(res['status']==500){
+                    alert(res['msg']);
+                    window.location.href = "http://118.89.49.60/user_login";
+                }else if(res['status']==200){
+                    alert(res['msg']);
+                    window.location.href = "http://118.89.49.60/"+res['username'];
+                }
+            },
+            error:function () {
+                alert('error!')
+            },
+        });
+
+
+    }
+</script>
+
+</body>
+</html>

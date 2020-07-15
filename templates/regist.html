@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小型教育网站</title>
+    <link rel="stylesheet" href="../static/css/regist.css">
+    <script type="text/javascript" src="../static/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../static/js/jquery.SuperSlide.2.1.1.js"></script>  <!--和tab级联相关    js-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div id="content">
+    <!--头部-->
+    <div class="content-header clearfix">
+        <a href="javascript:;" class="current">注册</a>
+    </div>
+    <!--内容-->
+    <div class="content-body">
+
+        <div class="dom">
+            <div>
+                <div class="s1">
+                    <h4>手机号码</h4>
+                    <input name="phone01" type="text" placeholder="填写你的手机号码作为登录账户">
+                </div>
+                <div class="s1">
+                    <h4>用户名</h4>
+                    <input name="username" type="text" placeholder="中、英文均可, 最长20个字符或10个汉字">
+                </div>
+                <div class="s1">
+                    <h4>密码</h4>
+                    <input name="password01" type="text" placeholder="6-30位英文、数字、符号, 区分大小写">
+                </div>
+                <div class="s1 re_input">
+                    <h4>再次输入密码</h4>
+                    <input name="password02" type="text" placeholder="6-30位英文、数字、符号, 区分大小写">
+                </div>
+
+                <input type="button" class="btn" onclick="regist_btn()" value="注&nbsp;册">
+            </div>
+            <div class="dom-footer">
+                <div class="login-another">
+                    <span>已有账号?</span>
+                    <a href='http://118.89.49.60/user_login'>去登陆</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- 注册框 检测-->
+
+
+
+<script>
+    function regist_btn() {
+        var pathname = window.location.pathname;
+        var phone = $('input[name=phone01]').val();
+        var username = $('input[name=username]').val();
+        var password = $('input[name=password01]').val();
+        var password11 = $('input[name=password02]').val();
+        if(phone.length !== 11){
+            alert('手机号错误！');
+            document.getElementsByName('phone01')[0].focus();
+            return false
+	}else if(!(/^1[3456789]\d{9}$/.test(phone))){
+	    alert("手机号格式不正确");
+	    return false;
+        }else if(username.length > 30 || username.length=== 0){
+            alert('用户名错误！');
+            document.getElementsByName('username')[0].focus();
+            return false
+        }else if(password.length<6 || password.length >30 ||password.length===0){
+            alert('密码格式错误！');
+            document.getElementsByName('password01')[0].focus();
+            return false
+        }else if(password!==password11 ){
+            alert('两个密码不一致！');
+            document.getElementsByName('password02')[0].focus();
+            return false
+        }
+        var data = {'phone':phone,'username':username,'password':password,'password1':password11};
+        $.ajax({
+            url:"http://118.89.49.60"+pathname,
+            type:'POST',
+            data: JSON.stringify(data),
+            contentType: 'application/json; charset=UTF-8',
+            success:function (resp) {
+                    var res = eval(resp);
+                    if(res['status']==500){
+                        alert(res['msg']);
+                        window.location.href = "http://118.89.49.60/user_regist";
+                    }else if(res['status']==200){
+                        alert(res['msg']);
+                        window.location.href = "http://118.89.49.60/user_login";
+                    }
+
+            },
+            error:function () {
+                alert('error!')
+            },
+        });
+
+    }
+</script>
+
+
+</body>
+</html>

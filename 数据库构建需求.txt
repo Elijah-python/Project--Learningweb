@@ -1,0 +1,47 @@
+数据库设计
+
+https://www.cnblogs.com/yafeng666/p/12541896.html
+
+https://www.cnblogs.com/houzheng/p/10980425.html
+https://www.cnblogs.com/xiaoxi-3-/p/8026504.html
+https://blog.csdn.net/weixin_44251004/article/details/89388538
+
+一、User表
+
+username
+
+password
+
+phone
+
+            create database learningweb_db charset utf8;
+            use learningweb_db;
+create table user_info(user_id int(5) primary key auto_increment,phone varchar(11),username varchar(50),password varchar(50))charset=utf8;
+
+
+二、blog_info表
+
+   ---python表
+		url
+
+		title
+
+		detail_info
+
+   ---...
+	前端开发 --CSS\JS\VUE\REACR   (css_blog    js_blog  vue_blog  react_blog  )
+	python系列--python基础、爬虫、flask、机器学习    (python_base_blog   spider_blog   flask_blog   ai_blog)
+	数据库--mysql\redis     (mysql_blog   redis_blog  )
+
+
+            create table python_base(url varchar(500),title varchar(100),detail_info varchar(500))charset=utf8;
+
+三、book_info表
+
+img_url
+
+buybook_url
+
+book_name
+
+            create table python_book(book_url varchar(100),title varchar(100),img_url varchar(200))charset=utf8;

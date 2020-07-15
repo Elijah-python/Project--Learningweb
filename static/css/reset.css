@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/*css ----初始化----- */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img ,td,tr,th{margin: 0; padding: 0;}
+fieldset, img, input, button {border: none;padding: 0;margin: 0;outline-style: none;}/*各浏览器显示不同，去掉蓝色边框*/
+input {padding-top: 0;padding-bottom: 0;}
+select, input {vertical-align: middle;}
+textarea {resize: none;}/*防止拖动 影响布局*/
+table {border-collapse: collapse;border-spacing: 0;}/*去掉行内替换元素空白缝隙*/
+ul, ol { list-style: none;}
+h1, h2, h3, h4, h5, h6 {text-decoration: none;font-weight: normal;font-size: 100%;}
+img {border: 0;vertical-align: middle;}
+/*清除浮动*/
+.clearfix:before, .clearfix:after {content: "";display: block;}
+.clearfix:after {clear: both;}
+.clearfix {*zoom: 1; /*IE/7/6*/}
+s, i, em {font-style: normal; text-decoration: none;}
+i{display: block;}
+/*需要更改*/
+body {margin: 0 auto;font-family: "Microsoft Yahei", Helvetica, Arial, sans-serif;font-size: 14px;color: #333;background-color: #ffffff;}
+a { color: #333;/*主要颜色*/text-decoration: none;}
+a:hover{color: #c80027;text-decoration: none;}
+/*公共类*/
+.w {/*版心 提取 */width: 1200px;margin: 0 auto;}
+.fl {float: left;}.fr {float: right;}
+.al {text-align: left;}.ac {text-align: center;}.ar {text-align: right;}.hide {display: none;}
+

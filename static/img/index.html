@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>注册</title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+
+</head>
+<body>
+    <!-- 头部样式开始 -->
+
+        <div class="nav">
+            <div class="main_nav w clearfix">
+                 <div class="total_btn fl">
+                    <p class="t"><i></i>全部服务分类<span class="shadow1"></span><span class="shadow2"></span></p>
+                    <ul class="total_nav clearfix hide">
+					                        <li class="navli"><h3>金融类公司代办<i></i></h3>
+                           <div class="drop">
+                                <ul class="clearfix">
+																		<li><a href="http://p.qiao.baidu.com/cps/chat?siteId=10612845&userId=23638792" target="__blank">融资租赁</a></li>
+									                                </ul>
+                           </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- 头部样式结束 -->
+
+    <!-- bottom开始 -->
+
+    <!-- bottom结束 -->
+    <!-- footer开始 -->
+     <div class="footer">
+         <div class="footerBottom">
+             <p>版权所有：阳光奥美企业管理（广州）有限公司&nbsp;&nbsp;&nbsp;&nbsp;  地址：深圳市南山区大冲商务中心B座31B <br />
+             粤ICP备16047714号-1公安网备001545584521号 <a href="">站长统计</a></p>
+         </div>       
+     </div>
+     <!-- footer结束 -->
+</body>
+        <script>
+            $(function(){
+             var $navli=$('.total_nav .navli');
+             var $drop=$('.total_nav .navli .drop');
+             $('.total_btn').hover(
+                 function(){
+                     $(this).find('.total_nav').show();
+                     $navli.mouseenter(function(){
+                         $drop.hide();
+                         $(this).find('.drop').show();
+                     });
+                 },
+                 function(){
+                     $drop.hide();
+                     $(this).find('.total_nav').hide();
+                 }
+             );
+         })
+        </script>
+</html>

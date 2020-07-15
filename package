@@ -1,0 +1,7 @@
+pymysql
+flask
+models
+flask_sqlalchemy
+requests
+fake_useragent
+lxml

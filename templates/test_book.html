@@ -1,0 +1,457 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>小型教育网站</title>
+
+
+    <link href="../static/css/style.css" rel="stylesheet" type="text/css" />
+
+    <link href="../static/css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="../static/css/top_line.css" rel="stylesheet" type="text/css" />
+    <script src="../static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../static/js/jquery-1.11.3.min.js"></script>
+    <script src="../static/js/global.js"></script>
+    <script src="../static/js/checkform.js"></script>
+    <script src="../static/js/wow.js"></script>        <!-- 向上浮动出页面 -->
+    <script src="../static/js/imagesloaded.min.js"></script>
+    <script type="text/javascript" src="../static/js/jquery.SuperSlide.2.1.1.js"></script>
+</head>
+<body>
+  <div class="nav">
+    <div class="main_nav w clearfix">
+<div class="total_btn fl">
+                    <ul>
+                        <p class="t"><i></i><a href='javascript:' onclick="return false;"  class="to_index">首页</a></p>
+                            <ul class="total_nav clearfix hide">
+					            <li class="navli"><h3>前端开发<i></i></h3>
+                                    <div class="drop">
+                                        <ul class="clearfix">
+									        <li><a href='javascript:'  class="css">CSS</a></li>
+								        </ul>
+                                        <ul class="clearfix">
+									        <li><a href='javascript:'  class="js">JS</a></li>
+								        </ul>
+                                        <ul class="clearfix">
+									        <li><a href='javascript:'  class="vue">Vue</a></li>
+								        </ul>
+                                        <ul class="clearfix">
+									        <li><a href='javascript:'  class="react">React</a></li>
+								        </ul>
+                                    </div>
+                                </li>
+					             <li class="navli"><h3>python系列<i></i></h3>
+                                    <div class="drop">
+                                        <ul class="clearfix">
+											<li><a href='javascript:'  class="python_base">python基础</a></li>
+                                        </ul>
+                                        <ul class="clearfix">
+									        <li><a href='javascript:'  class="spider">爬虫</a></li>
+								        </ul>
+                                        <ul class="clearfix">
+									        <li><a href='javascript:'  class="flask">Flask</a></li>
+								        </ul>
+                                        <ul class="clearfix">
+									        <li><a href='javascript:'  class="machine_learning">机器学习</a></li>
+								        </ul>
+                                    </div>
+                                 </li>
+					             <li class="navli"><h3>编程基础和数据库<i></i></h3>
+                                    <div class="drop">
+                                        <ul class="clearfix">
+											<li><a href='javascript:'  class="mysql">MySQL</a></li>
+                                        </ul>
+                                        <ul class="clearfix">
+									        <li><a href='javascript:'  class="redis">Redis</a></li>
+								        </ul>
+                                    </div>
+                                 </li>
+                                <li class="navli"><h3>电子书<i></i></h3>
+                                    <div class="drop">
+                                        <ul class="clearfix">
+											<li><a href='javascript:'   class="book">电子书</a></li>
+									      </ul>
+                                    </div>
+                                 </li>
+                             </ul>
+                    </ul>
+                </div>
+      <div class="log">小型教育学习网站</div>
+      <div class="act"><p id="welcome"> 欢迎您：{{ username }}&nbsp;&nbsp;&nbsp;&nbsp;</p><a href={{ url_for('login') }} class="user">退出</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='javascript:' onclick="return false;"  class="user" id="my">个人中心</a></div>
+    </div>
+  </div>
+
+  <!--  中间电子图书模块   -->
+
+  <div id="header-blank" class="show992">
+  </div>
+  <div id="body" class="trans">
+      <div class="blank15">
+      </div>
+      <div class="products">
+        <div class="product-item">
+          <img src="http://img3m1.ddimg.cn/75/1/28542171-1_b_2.jpg" alt="" class="item-img">
+          <div class="item-title">
+            <a href="http://product.dangdang.com/28542171.html">Python Web开发从入门到精通</a>
+          </div>
+        </div>
+        <div class="product-item">
+          <img src="http://img3m5.ddimg.cn/40/15/23399185-1_b_3.jpg" alt="" class="item-img">
+          <div class="item-title">
+            <a href="http://product.dangdang.com/23399185.html">Python数据分析基础教程：NumPy学习指南(第2版)</a>
+          </div>
+        </div>
+        <div class="product-item">
+          <img src="http://img3m8.ddimg.cn/51/29/27931218-1_b_3.jpg" alt="" class="item-img">
+          <div class="item-title">
+            <a href="http://product.dangdang.com/27931218.html" >Python安全实践——PythonHacking</a>
+          </div>
+        </div>
+        <div class="product-item">
+          <img src="http://img3m3.ddimg.cn/40/9/28525603-1_b_2.jpg" alt="" class="item-img">
+          <div class="item-title">
+            <a href="http://product.dangdang.com/28525603.html">Python编程自学手册 </a>
+          </div>
+        </div>
+        <div class="product-item">
+          <img src="http://img3m1.ddimg.cn/42/35/27932001-1_b_3.jpg" alt="" class="item-img">
+          <div class="item-title">
+            <a href="http://product.dangdang.com/27932001.html" >Selenium 3+Python 3自动化测试项目实战：从菜鸟到高手</a>
+          </div>
+        </div>
+        <div class="product-item">
+          <img src="http://img3m1.ddimg.cn/84/19/28493571-1_b_2.jpg" alt="" class="item-img">
+          <div class="item-title">
+            <a href="http://product.dangdang.com/28493571.html">Python基础与大数据应用</a>
+          </div>
+        </div>
+        <div class="product-item">
+          <img src="http://img3m8.ddimg.cn/33/5/28515498-1_b_2.jpg" alt="" class="item-img">
+          <div class="item-title">
+            <a href="http://product.dangdang.com/28515498.html" >Python深度学习TensorFlow与PyTorch套装</a>
+          </div>
+        </div>
+        <div class="product-item">
+          <img src="http://img3m1.ddimg.cn/25/3/28528261-1_b_1.jpg" alt="" class="item-img">
+          <div class="item-title">
+            <a href="http://product.dangdang.com/28528261.html">Python数据分析与可视化从入门到精通</a>
+          </div>
+        </div>
+        <div class="product-item">
+          <img src="http://img3m4.ddimg.cn/15/28/28487364-1_b_3.jpg" alt="" class="item-img">
+          <div class="item-title">
+            <a href="http://product.dangdang.com/28487364.html">Python与开源GIS：数据处理、空间分析与地图制图</a>
+          </div>
+        </div>
+        <div class="product-item">
+          <img src="http://img3m2.ddimg.cn/92/31/27890372-1_b_1.jpg" alt="" class="item-img">
+          <div class="item-title">
+            <a href="http://product.dangdang.com/27890372.html" >Python Docker实战</a>
+          </div>
+        </div>
+        <div class="product-item">
+          <img src="http://img3m9.ddimg.cn/87/29/28539609-1_b_1.jpg" alt="" class="item-img">
+          <div class="item-title">
+            <a href="http://product.dangdang.com/28539609.html">Python数据分析从入门到精通</a>
+          </div>
+        </div>
+        <div class="product-item">
+          <img src="http://img3m9.ddimg.cn/72/22/25182999-1_b_3.jpg" alt="" class="item-img">
+          <div class="item-title">
+            <a href="http://product.dangdang.com/25182999.html">OpenCV算法精解：基于Python与C++</a>
+          </div>
+        </div>
+        <div class="product-item">
+          <img src="http://img3m7.ddimg.cn/40/13/25200787-1_b_3.jpg" alt="" class="item-img">
+          <div class="item-title">
+            <a href="http://product.dangdang.com/25200787.html" >Python数据分析与数据化运营</a>
+          </div>
+        </div>
+        <div class="product-item">
+          <img src="http://img3m1.ddimg.cn/98/17/28474181-1_b_2.jpg" alt="" class="item-img">
+          <div class="item-title">
+            <a href="http://product.dangdang.com/28474181.html">Python游戏设计案例实战</a>
+          </div>
+        </div>
+        <div class="product-item">
+          <img src="http://img3m5.ddimg.cn/0/32/28496655-1_b_3.jpg" alt="" class="item-img">
+          <div class="item-title">
+            <a href="http://product.dangdang.com/28496655.html" >Python自动化测试实战</a>
+          </div>
+        </div>
+          <div class="product-item">
+          <img src="http://img3m0.ddimg.cn/96/6/1562931510-1_b_1.jpg" alt="" class="item-img">
+          <div class="item-title">
+            <a href="http://product.dangdang.com/1562931510.html" >Vue on Rails</a>
+          </div>
+        </div>
+        <div id="append_book"></div>
+      </div>
+
+
+
+  <!-- footer开始 -->
+      <div class="footer">
+        <div class="footerBottom">
+            <p>版权所有：本网站所有数据均免费公开，不涉及利益，如有不妥请联系站长&nbsp;&nbsp;&nbsp;&nbsp;  联系邮箱：474625448@qq.com <br />
+             浙ICP备xxxxxxxx号-xxx公安网备xxxxxxxxx号 <a href=""></a></p>
+        </div>
+      </div>
+  <!-- footer结束 -->
+
+    <!--右侧固定导航栏-->
+    <div id="follow">
+        <div id="openHotline" class="item relative hide992" row="2">
+            <a href="#"​ class="ico orange block absolute" title="回到顶部"
+            onclick="OptHot(1);OptQrcode(0);OptOnline(0);" rel="nofollow">顶部
+            </a>
+        </div>
+        <div class="item relative trans">
+            <a href="#"​ class="ico red block trans sina" title="新页面打开"
+            target="_blank" rel="nofollow">新页
+                <span class="middle fa fa-weibo fa-2x">
+                </span>
+            </a>
+        </div>
+        <div id="openQrcode" class="item relative trans">
+            <a href="#"​ class="ico green block trans wechat" title="回到顶部"
+            onclick="OptQrcode();OptOnline(0)" rel="nofollow">
+                <span class="middle fa fa-weixin fa-2x">
+                </span>
+            </a>
+        </div>
+        <div class="item relative">
+            <a href="#"​ class="ico block trans totop show totop" title="回到顶部"
+            onclick="toTop();" rel="nofollow">
+                <span class="middle fa fa-angle-up fa-2x">
+                </span>
+            </a>
+        </div>
+    </div>
+  </div>
+</body>
+
+<script>
+    //首页，下拉框的点击触发
+    $(function(){
+      var $navli=$('.total_nav .navli');
+      var $drop=$('.total_nav .navli .drop');
+      $('.total_btn').hover(
+          function(){
+              $(this).find('.total_nav').show();
+              $navli.mouseenter(function(){
+                  $drop.hide();
+                  $(this).find('.drop').show();
+              });
+          },
+          function(){
+              $drop.hide();
+              $(this).find('.total_nav').hide();
+          }
+      );
+  })
+</script>
+
+<script>
+    $(function () {
+        var a_book = document.createElement("a");
+        var a_blog = document.createElement("a");
+        var pathname = window.location.pathname.split('\/')[1];
+        $('.to_index').on('click',function () {
+            $('.to_index').empty()
+            document.body.appendChild(a_book);
+            a_book.setAttribute('href','http://118.89.49.60/'+pathname)
+            a_book.click()
+        })
+        $('#my').on('click',function () {
+            $('#my').empty()
+            document.body.appendChild(a_book);
+            a_book.setAttribute('href','http://118.89.49.60/'+pathname+'/myself')
+            a_book.click()
+        })
+        $('.book').on('click',function () {
+            $('.book').empty()
+            document.body.appendChild(a_book);
+            a_book.setAttribute('href','http://118.89.49.60/'+pathname+'/book')
+            a_book.click()
+        })
+        $('.css').on('click',function () {
+            $('.css').empty()
+            document.body.appendChild(a_blog);
+            a_blog.setAttribute('href','http://118.89.49.60/'+pathname+'/css')
+            a_blog.click()
+        })
+        $('.js').on('click',function () {
+            $('.js').empty()
+            document.body.appendChild(a_blog);
+            a_blog.setAttribute('href','http://118.89.49.60/'+pathname+'/js')
+            a_blog.click()
+        })
+        $('.vue').on('click',function () {
+            $('.vue').empty()
+            document.body.appendChild(a_blog);
+            a_blog.setAttribute('href','http://118.89.49.60/'+pathname+'/vue')
+            a_blog.click()
+        })
+        $('.react').on('click',function () {
+            $('.react').empty()
+            document.body.appendChild(a_blog);
+            a_blog.setAttribute('href','http://118.89.49.60/'+pathname+'/react')
+            a_blog.click()
+        })
+        $('.python_base').on('click',function () {
+            $('.python_base').empty()
+            document.body.appendChild(a_blog);
+            a_blog.setAttribute('href','http://118.89.49.60/'+pathname+'/python_base')
+            a_blog.click()
+        })
+        $('.spider').on('click',function () {
+            $('.spider').empty()
+            document.body.appendChild(a_blog);
+            a_blog.setAttribute('href','http://118.89.49.60/'+pathname+'/spider')
+            a_blog.click()
+        })
+        $('.flask').on('click',function () {
+            $('.flask').empty()
+            document.body.appendChild(a_blog);
+            a_blog.setAttribute('href','http://118.89.49.60/'+pathname+'/flask')
+            a_blog.click()
+        })
+        $('.machine_learning').on('click',function () {
+            $('.machine_learning').empty()
+            document.body.appendChild(a_blog);
+            a_blog.setAttribute('href','http://118.89.49.60'+pathname+'/machine_learning')
+            a_blog.click()
+        })
+        $('.mysql').on('click',function () {
+            $('.mysql').empty()
+            document.body.appendChild(a_blog);
+            a_blog.setAttribute('href','http://118.89.49.60/'+pathname+'/mysql')
+            a_blog.click()
+        })
+        $('.redis').on('click',function () {
+            $('.redis').empty()
+            document.body.appendChild(a_blog);
+            a_blog.setAttribute('href','http://118.89.49.60/'+pathname+'/redis')
+            a_blog.click()
+        })
+    })
+</script>
+
+<script type="text/javascript">
+    var pk = 1;
+    $(window).scroll(function () {
+        var htmlHeight = $(document).height();
+        var clientHeight = $(window).height();
+        var scrollTop = $(document).scrollTop();
+        var he = scrollTop + clientHeight;
+        if (he == htmlHeight ) {
+            pk = pk +1; //每次和后端交互，page+1。
+            addListMore();
+        }
+        if (scrollTop <=0){
+            refresh();
+        }
+    });
+    function addListMore() {
+        var pathname = window.location.pathname;
+        var data = {'page':pk};
+        $.ajax({
+            type:"POST",
+            url:pathname,
+            dataType:"json",
+            data:JSON.stringify(data),
+            success:function (data) {
+                var res = eval(data);
+                if (res['book_list']) {
+                    $("#append_book").empty();
+                    var div = document.createElement("div");
+                    document.body.appendChild(div);
+                    div.innerHTML = '      <div class="add_book">\n' +
+                        '        <div class="product-item">\n' +
+                        '          <img src=' + res['book_list'][0]['img_url'] + '  alt="" class="item-img">\n' +
+                        '          <div class="item-title">\n' +
+                        '            <a href=' + res['book_list'][0]['book_url'] + '>' + res['book_list'][0]['title'] + '</a>\n' +
+                        '          </div>\n' +
+                        '        </div>\n' +
+                        '        <div class="product-item">\n' +
+                        '          <img src=' + res['book_list'][1]['img_url'] + '  alt="" class="item-img">\n' +
+                        '          <div class="item-title">\n' +
+                        '            <a href=' + res['book_list'][1]['book_url'] + '>' + res['book_list'][1]['title'] + '</a>\n' +
+                        '          </div>\n' +
+                        '        </div>\n' +
+                        '        <div class="product-item">\n' +
+                        '          <img src=' + res['book_list'][2]['img_url'] + '  alt="" class="item-img">\n' +
+                        '          <div class="item-title">\n' +
+                        '            <a href=' + res['book_list'][2]['book_url'] + '>' + res['book_list'][2]['title'] + '</a>\n' +
+                        '          </div>\n' +
+                        '        </div>\n' +
+                        '        <div class="product-item">\n' +
+                        '          <img src=' + res['book_list'][3]['img_url'] + '  alt="" class="item-img">\n' +
+                        '          <div class="item-title">\n' +
+                        '            <a href=' + res['book_list'][3]['book_url'] + '>' + res['book_list'][3]['title'] + '</a>\n' +
+                        '          </div>\n' +
+                        '        </div>\n' +
+                        '        <div class="product-item">\n' +
+                        '          <img src=' + res['book_list'][4]['img_url'] + '  alt="" class="item-img">\n' +
+                        '          <div class="item-title">\n' +
+                        '            <a href=' + res['book_list'][4]['book_url'] + '>' + res['book_list'][4]['title'] + '</a>\n' +
+                        '          </div>\n' +
+                        '        </div>\n' +
+                        '        <div class="product-item">\n' +
+                        '          <img src=' + res['book_list'][5]['img_url'] + '  alt="" class="item-img">\n' +
+                        '          <div class="item-title">\n' +
+                        '            <a href=' + res['book_list'][5]['book_url'] + '>' + res['book_list'][5]['title'] + '</a>\n' +
+                        '          </div>\n' +
+                        '        </div>\n' +
+                        '        <div class="product-item">\n' +
+                        '          <img src=' + res['book_list'][6]['img_url'] + '  alt="" class="item-img">\n' +
+                        '          <div class="item-title">\n' +
+                        '            <a href=' + res['book_list'][6]['book_url'] + '>' + res['book_list'][6]['title'] + '</a>\n' +
+                        '          </div>\n' +
+                        '        </div>\n' +
+                        '        <div class="product-item">\n' +
+                        '          <img src=' + res['book_list'][7]['img_url'] + '  alt="" class="item-img">\n' +
+                        '          <div class="item-title">\n' +
+                        '            <a href=' + res['book_list'][7]['book_url'] + '>' + res['book_list'][7]['title'] + '</a>\n' +
+                        '          </div>\n' +
+                        '        </div>\n' +
+                        '    <\div>'
+                }
+                else {
+                        alert('没有数据啦~(>_<)!!')
+                    }
+
+            },
+            error:function (data) {
+                console.log(data)
+                console.log(1)
+                alert(data)
+                alert('error!')
+                alert(XMLHttpRequest.status);
+                alert(XMLHttpRequest.readyState);
+                alert(textStatus);
+            },
+            contentType:'application/json;charset=utf-8,charset=UTF-8',
+
+        })
+    }
+    function refresh() {
+        var pathname = window.location.pathname;
+        $.ajax({
+            type:"GET",
+            url:pathname,
+            dataType:"html",
+            success:function () {
+                window.location.reload();
+            }
+        })
+
+    }
+</script>
+
+
+
+</html>
